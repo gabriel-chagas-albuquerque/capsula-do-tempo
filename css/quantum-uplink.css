@@ -1,0 +1,79 @@
+.quantum-uplink {
+  text-align: center;
+  margin: 50px 0 30px;
+  position: relative;
+}
+
+.quantum-uplink::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(200, 42, 230, 0.1) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: quantumPulse 6s ease-in-out infinite;
+}
+
+@keyframes quantumPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.2;
+  }
+}
+
+.quantum-title {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--secondary);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.quantum-loader {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.quantum-loader::before,
+.quantum-loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--primary);
+  animation: spinQuantum 2s linear infinite;
+}
+
+.quantum-loader::after {
+  border: 2px solid transparent;
+  border-left-color: var(--secondary);
+  animation-duration: 3s;
+}
+
+@keyframes spinQuantum {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

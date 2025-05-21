@@ -1,0 +1,33 @@
+.neural-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 230, 0.3),
+    transparent
+  );
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-divider::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: var(--primary);
+  top: 0;
+  left: -100px;
+  animation: neuralFlow 3s linear infinite;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+@keyframes neuralFlow {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}

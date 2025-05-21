@@ -1,0 +1,174 @@
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary);
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--primary);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.capsule-meta {
+  font-size: 0.8rem;
+  color: rgba(240, 248, 255, 0.5);
+}
+
+.capsule-content {
+  padding: 25px;
+  background-color: rgba(10, 12, 20, 0.7);
+  position: relative;
+}
+
+.capsule-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(10, 12, 20, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.time-capsule:hover .capsule-content::after {
+  opacity: 1;
+}
+
+.holo-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: rgba(0, 255, 230, 0.1);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.holo-btn:hover {
+  background-color: rgba(0, 255, 230, 0.2);
+  box-shadow: 0 0 15px rgba(0, 255, 230, 0.4);
+}
+
+.holo-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.holo-btn:hover::before {
+  left: 100%;
+}
+
+/* Mensagem de texto com efeito de digitação */
+.message {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  position: relative;
+  color: rgba(240, 248, 255, 0.9);
+}
+
+.message-intro {
+  color: var(--primary);
+  font-weight: 400;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Listas do futuro */
+.future-list {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.future-list li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.future-list li::before {
+  content: "◈";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* Área da mensagem holográfica */
+.hologram-area {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 230, 0.15);
+  padding: 20px;
+  margin: 25px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    rgba(0, 255, 230, 0.03) 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  }
+}

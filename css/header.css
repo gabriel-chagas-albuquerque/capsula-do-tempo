@@ -1,0 +1,108 @@
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, var(--primary) 5%, transparent 70%);
+  opacity: 0.7;
+  filter: blur(10px);
+  border-radius: 50%;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.5);
+    opacity: 0.9;
+  }
+}
+
+.logo {
+  position: relative;
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo::after {
+  content: "3025";
+  position: absolute;
+  right: -70px;
+  top: 5px;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(240, 248, 255, 0.7);
+  letter-spacing: 2px;
+}
+
+/* Seções da cápsula do tempo */
+.time-capsule {
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+  border: 1px solid rgba(0, 255, 230, 0.1);
+  box-shadow: 0 0 30px rgba(0, 255, 230, 0.05);
+}
+
+.time-capsule::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0.8;
+  filter: blur(1px);
+}
+
+.capsule-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 255, 230, 0.1);
+  position: relative;
+}
+
+.capsule-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--primary);
+  opacity: 0.8;
+  box-shadow: 0 0 10px var(--primary);
+}

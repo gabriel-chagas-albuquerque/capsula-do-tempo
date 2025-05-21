@@ -1,0 +1,9 @@
+:root {
+  --primary: rgba(0, 255, 230, 1);
+  --primary-dark: rgba(0, 210, 190, 1);
+  --secondary: rgba(200, 42, 230, 1);
+  --dark: rgba(10, 12, 20, 1);
+  --dark-translucent: rgba(10, 12, 20, 0.85);
+  --light: rgba(240, 248, 255, 1);
+  --font-main: "Segoe UI", "Roboto", sans-serif;
+}

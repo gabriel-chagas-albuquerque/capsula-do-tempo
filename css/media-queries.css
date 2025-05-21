@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .logo::after {
+                right: -50px;
+                font-size: 1rem;
+            }
+            
+            .capsule-content {
+                padding: 15px;
+            }
+        }
