@@ -16,3 +16,17 @@
                 padding: 15px;
             }
         }
+
+        @media(max-width:475px) {
+            .btn-group {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                gap:15px;
+            }
+
+            .holo-btn {
+                text-align: center;
+            }
+        }
