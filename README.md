@@ -57,9 +57,9 @@ time-capsule-3025/
 └── media/                    # Media assets directory
     ├── images/               # Image files
     │   ├── cenas-cotidiano.png
-    │   ├── expressões-culturais.png
+    │   ├── expressoes-culturais.png
     │   ├── favicon.png
-    │   ├── mudanças-climaticas.png
+    │   ├── mudancas-climaticas.png
     │   └── tecnologia.png     
     └── videos/               # Video files
 ```
