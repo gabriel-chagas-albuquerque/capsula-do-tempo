@@ -170,8 +170,11 @@
   }
 }
 .gallery-section {
-  padding: 2rem 1rem;
   text-align: center;
+}
+
+.gallery-section .message {
+  margin-top: 10px;
 }
 
 .gallery-grid {
